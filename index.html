@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+    <div class="card">
+        <div class="tl">
+            <label for="input" class="todoClass">Todo List</label>
+            <input type="text" class="input" id="input">
+            <button type="button" class="btn" id="btn">create todo</button>
+            <div class="card2" id="todo">
+                <input type="radio">
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+    <script>        
+            let input = document.getElementById("input").value
+            const result = console.info(input)
+            let btn = document.getElementById("btn")
+            let createText = document.createElement("div")
+
+            btn.addEventListener('click', function () {
+                const newText = input
+                createText.innerHTML = newText
+            })
+
+    </script>
+</body>
+
+</html>
