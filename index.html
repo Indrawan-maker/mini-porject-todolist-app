@@ -4,37 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todolist</title>
+    <title>Todo-List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
     <div class="card">
-        <div class="tl">
-            <label for="input" class="todoClass">Todo List</label>
-            <input type="text" class="input" id="input">
-            <button type="button" class="btn" id="btn">create todo</button>
-            <div class="card2" id="todo">
-                <input type="radio">
+            <div class="tl">
+                <label for="input" class="todoClass">Todo List</label>
+                <input type="text" class="input" id="input">
+                <button type="button" class="btn" id="btn" onclick="addTodo()">create todo</button>
+                <div class="card2" id="card2">
+                    <input type="checkbox" id="cb"style="cursor: pointer;">
+                    <p style="margin-left: 10px;">some todo</p>
+                    <button type="reset" id="btn2" class = "btn2">Delete</button>
+                </div>
             </div>
         </div>
-        </div>
-        </div>
+    </div>
 
 
-    <script>        
-            let input = document.getElementById("input").value
-            const result = console.info(input)
-            let btn = document.getElementById("btn")
-            let createText = document.createElement("div")
-
-            btn.addEventListener('click', function () {
-                const newText = input
-                createText.innerHTML = newText
-            })
-
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
