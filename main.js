@@ -4,9 +4,10 @@ const input = document.getElementById("input")
 const cb = document.getElementById("cb")
 const btn2 = document.getElementById("btn2")
 
+
+
 // ketika klik button
 function addTodo() {
-        let i = 0;
         // ambil input value dari user
         card2.innerHTML = input.value
         const newDiv = card2.cloneNode();
@@ -18,5 +19,4 @@ function addTodo() {
         const newBtn = btn2.cloneNode()
         newBtn.id = "btn2" + ++i
         newDiv.parentNode.appendChild(newBtn)
-
 }
