@@ -15,16 +15,16 @@
                 <label for="input" class="todoClass">Todo List</label>
                 <input type="text" class="input" id="input">
                 <button type="button" class="btn" id="btn" onclick="addTodo()">create todo</button>
-                <div class="card2" id="card2">
-                    <input type="checkbox" id="cb"style="cursor: pointer;">
-                    <p style="margin-left: 10px;">some todo</p>
-                    <button type="reset" id="btn2" class = "btn2">Delete</button>
-                </div>
+
+                <div id="todoContainer"></div>
             </div>
         </div>
-    </div>
-
-
+                <div class="card2" style="display: none;">
+                        <input type="checkbox" id="cb"style="cursor: pointer; margin-left: 8px;">
+                        <p style="margin-left: 10px;" id="p">some todo</p>
+                        <button type="button" id="btn2" class = "btn2">Delete</button>
+                    </div>
+        </div>
     <script src="main.js"></script>
 </body>
 

@@ -1,22 +1,39 @@
-const card2 = document.getElementById("card2")
 const card1 = document.getElementById("card")
-const input = document.getElementById("input")
 const cb = document.getElementById("cb")
 const btn2 = document.getElementById("btn2")
 
+let i = 0;
 
 
-// ketika klik button
 function addTodo() {
-        // ambil input value dari user
-        card2.innerHTML = input.value
-        const newDiv = card2.cloneNode();
-        const newCb = cb.cloneNode()
-        newCb.id = "cb" + ++i
-        newDiv.id = "card2" + ++i
-        card2.parentNode.appendChild(newDiv)
-        input.parentNode.appendChild(newCb)
-        const newBtn = btn2.cloneNode()
-        newBtn.id = "btn2" + ++i
-        newDiv.parentNode.appendChild(newBtn)
+        const input = document.getElementById("input")
+        const todoContainer = document.getElementById("todoContainer")
+        const card2 = document.getElementById("card2")
+        if(input.value == "") {
+                alert("tolong isi todolist kakak")
+                return
+        }
+                console.log("sudah di isi")
+                let newCard = card2.cloneNode(true)
+                newCard.style.display = "flex"
+                newCard.removeAttribute("id")
+
+                const p = newCard.querySelector("p")
+                p.textContent = input.value
+
+                const delBtn = newCard.querySelector("btn2")
+                input.value = ""
+                
+                btn2.addEventListener("btn2")
+                
+                cb.addEventListener("change", function () {
+        if(cb.checked) {
+                p.style.textDecoration = "underline"
+                p.style.fontStyle = "italic"
+        } else {
+                cb.style.textDecoration = "none";
+        }
+        
+})
+todoContainer.appendChild(newCard)
 }
