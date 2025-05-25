@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Jockey+One&family=Poetsen+One&family=Quicksand:wght@300..700&family=Sacramento&family=Tilt+Warp&display=swap');
 html,
 body{
     height: 100%;
@@ -6,9 +7,12 @@ body{
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%
+    height: 100%;
+    gap: 25px;
+
 }
 
 .card {
@@ -22,6 +26,50 @@ border-radius: 20px;
 width: 440px;
 min-height: 240px;
 flex-direction: column;
+margin-bottom: 200px;
+}
+
+#time{
+    color: rgb(0, 0, 0);
+    margin-left: 8px;
+      font-family: "Tilt Warp", sans-serif;
+      font-size: 54px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+    align-items: center;
+    justify-items: center;
+}
+
+#day {
+      font-family: "Tilt Warp", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+        align-items: center;
+    justify-items: center;
+}
+
+#good {
+    font-family: "Tilt Warp", sans-serif;
+    font-size: 34px;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+    justify-content: center; 
+    align-items: center; 
+    display: flex; 
+    flex-direction: column;
 }
 
 .card:hover {
@@ -30,7 +78,7 @@ flex-direction: column;
 
 .card2 {
 margin-top: 22px;
-margin-bottom: 18px;
+margin-left: auto;
 align-items: center;
 background-color: rgb(254, 218, 172);
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -38,14 +86,22 @@ transition: 0.3s;
 border-radius: 10px;
 width: 300px;
 height: 42px;
-justify-content: space-between; 
-flex-direction: column;
+justify-content: flex-start; 
+flex-direction: row;
 }
 
 .todoClass {
     font-weight: bolder;
     font-family: cursive;
     font-size: larger;
+font-family: "Tilt Warp", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+
 }
 
 .tl {
@@ -71,6 +127,11 @@ border-radius: 8px;
 font-weight: bolder;
 cursor: pointer;
     background-color: rgb(253, 235, 212);
+}
+
+.cb-class {
+    cursor: pointer;
+    
 }
 
 .btn2 {

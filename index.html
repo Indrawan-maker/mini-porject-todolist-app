@@ -6,23 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo-List</title>
     <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Jockey+One&family=Poetsen+One&family=Quicksand:wght@300..700&family=Sacramento&family=Tilt+Warp&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
     <div class="container">
+        <div>
+            <h1 id="time">template jam waktu sistem</h1>
+            <h3 id="day">template hari</h3>
+        </div>
+                <div style="margin-bottom: 30px;">
+            <h2  id="good"  class="goodd"></h2>
+        </div>
     <div class="card">
             <div class="tl">
-                <label for="input" class="todoClass">Todo List</label>
+                <label for="input" class="todoClass">Todolist</label>
                 <input type="text" class="input" id="input">
-                <button type="button" class="btn" id="btn" onclick="addTodo()">create todo</button>
+                <button type="button" class="btn" id="btn">create todo</button>
 
                 <div id="todoContainer"></div>
             </div>
         </div>
                 <div class="card2" style="display: none;">
-                        <input type="checkbox" id="cb"style="cursor: pointer; margin-left: 8px;">
+                        <input type="checkbox" id="cb" class="cb-class">
                         <p style="margin-left: 10px;" id="p">some todo</p>
-                        <button type="button" id="btn2" class = "btn2">Delete</button>
+                        <button type="button" id="btn2" class = "btn2"><i class="fas fa-trash"></i></button>
                     </div>
         </div>
     <script src="main.js"></script>

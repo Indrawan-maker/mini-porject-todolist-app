@@ -1,39 +1,43 @@
 const card1 = document.getElementById("card")
 const cb = document.getElementById("cb")
+const btn = document.getElementById("btn")
+const day = document.getElementById("day")
+const time = document.getElementById("time")
+const good = document.getElementById("good")
+const input = document.getElementById("input")
+const todoContainer = document.getElementById("todoContainer")
+const card2 = document.getElementById("card2")
 const btn2 = document.getElementById("btn2")
 
-let i = 0;
 
 
-function addTodo() {
-        const input = document.getElementById("input")
-        const todoContainer = document.getElementById("todoContainer")
-        const card2 = document.getElementById("card2")
-        if(input.value == "") {
-                alert("tolong isi todolist kakak")
-                return
-        }
-                console.log("sudah di isi")
-                let newCard = card2.cloneNode(true)
-                newCard.style.display = "flex"
-                newCard.removeAttribute("id")
+// display time
+const name = prompt("Silahkan masukan nama kakak😊") || "kakak"
 
-                const p = newCard.querySelector("p")
-                p.textContent = input.value
+let currentDateTime = new Date();
+let currentHours = currentDateTime.getHours()
+let currentMinutes = currentDateTime.getMinutes()
+let currentDate = currentDateTime.toDateString()
 
-                const delBtn = newCard.querySelector("btn2")
-                input.value = ""
-                
-                btn2.addEventListener("btn2")
-                
-                cb.addEventListener("change", function () {
-        if(cb.checked) {
-                p.style.textDecoration = "underline"
-                p.style.fontStyle = "italic"
-        } else {
-                cb.style.textDecoration = "none";
-        }
-        
-})
-todoContainer.appendChild(newCard)
+if (currentHours >= 4 && currentHours <= 9) {
+        good.textContent = `Good Morning, ${name}!`
+} else if (currentHours >= 10 && currentHours <= 14) {
+        good.textContent = `Good Afternoon, ${name}!`
+} else if (currentHours >= 15 && currentHours <= 18) {
+        good.textContent = `Good Evening, ${name}!`
+} else {
+        good.textContent = `Good Night, ${name}!`
 }
+function Time(num) {
+        return ("0" + num).slice(-2)
+}
+let currentTime = Time(currentHours) + ":" + Time(currentMinutes)
+
+time.textContent = currentTime
+day.textContent = currentDate
+
+btn.addEventListener('click', function() {
+        document.createElement("")
+})
+
+input.value = ""
