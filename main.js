@@ -1,14 +1,8 @@
-const card1 = document.getElementById("card")
-const cb = document.getElementById("cb")
-const btn = document.getElementById("btn")
 const day = document.getElementById("day")
 const time = document.getElementById("time")
 const good = document.getElementById("good")
 const input = document.getElementById("input")
-const todoContainer = document.getElementById("todoContainer")
-const card2 = document.getElementById("card2")
-const btn2 = document.getElementById("btn2")
-
+const ul = document.getElementById("todo-container")
 
 
 // display time
@@ -36,8 +30,31 @@ let currentTime = Time(currentHours) + ":" + Time(currentMinutes)
 time.textContent = currentTime
 day.textContent = currentDate
 
-btn.addEventListener('click', function() {
-        document.createElement("")
+function addTodo() {
+        if(input.value !== ""){
+                let newLi = document.createElement("li")
+                newLi.innerHTML = input.value
+                ul.appendChild(newLi)
+                let span = document.createElement("span")
+                span.innerHTML = "❌"
+                newLi.appendChild(span)
+        } else {
+                alert("masukan todonya kakak")
+        }
+        input.value = ""
+        }
+
+ul.addEventListener('click', function(e) {
+        if(e.target.tagName === "LI") {
+                e.target.classList.toggle("checked")
+        } else if(e.target.tagName === "SPAN") {
+                e.target.parentElement.remove()
+        }
 })
 
-input.value = ""
+
+
+
+
+
+
